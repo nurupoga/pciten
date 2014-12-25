@@ -8,8 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+ 
+    IBOutlet UIButton *iti;
+    IBOutlet UIButton *ni;
+    IBOutlet UIButton *san;
+    IBOutlet UIButton *yon;
+    IBOutlet UIButton *ue;
+    
+}
 
-
+-(IBAction)kotaeiti;
+-(IBAction)kotaeni;
+-(IBAction)kotaesan;
+-(IBAction)kotaeyon;
+-(IBAction)kaisi;
 @end
 

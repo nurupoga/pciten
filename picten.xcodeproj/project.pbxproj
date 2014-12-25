@@ -14,6 +14,11 @@
 		2B0817A01A492FCD009CDEE6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B08179F1A492FCD009CDEE6 /* Images.xcassets */; };
 		2B0817A31A492FCD009CDEE6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B0817A11A492FCD009CDEE6 /* LaunchScreen.xib */; };
 		2B0817AF1A492FCD009CDEE6 /* pictenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0817AE1A492FCD009CDEE6 /* pictenTests.m */; };
+		2B3625DD1A4A44D300BCD590 /* 名称未設定-1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2B3625DC1A4A44D300BCD590 /* 名称未設定-1.gif */; };
+		2B3625DF1A4A44DE00BCD590 /* 名称未設定-x2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2B3625DE1A4A44DE00BCD590 /* 名称未設定-x2.gif */; };
+		2B3625E11A4A46A900BCD590 /* leaf-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B3625E01A4A46A900BCD590 /* leaf-6.jpg */; };
+		2B3625E41A4A46B200BCD590 /* picten2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2B3625E21A4A46B200BCD590 /* picten2.gif */; };
+		2B3625E51A4A46B200BCD590 /* picten.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2B3625E31A4A46B200BCD590 /* picten.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,11 @@
 		2B0817A81A492FCD009CDEE6 /* pictenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pictenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B0817AD1A492FCD009CDEE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B0817AE1A492FCD009CDEE6 /* pictenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pictenTests.m; sourceTree = "<group>"; };
+		2B3625DC1A4A44D300BCD590 /* 名称未設定-1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "名称未設定-1.gif"; sourceTree = "<group>"; };
+		2B3625DE1A4A44DE00BCD590 /* 名称未設定-x2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "名称未設定-x2.gif"; sourceTree = "<group>"; };
+		2B3625E01A4A46A900BCD590 /* leaf-6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "leaf-6.jpg"; sourceTree = "<group>"; };
+		2B3625E21A4A46B200BCD590 /* picten2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = picten2.gif; sourceTree = "<group>"; };
+		2B3625E31A4A46B200BCD590 /* picten.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = picten.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +91,11 @@
 		2B0817911A492FCD009CDEE6 /* picten */ = {
 			isa = PBXGroup;
 			children = (
+				2B3625DE1A4A44DE00BCD590 /* 名称未設定-x2.gif */,
+				2B3625E01A4A46A900BCD590 /* leaf-6.jpg */,
+				2B3625E21A4A46B200BCD590 /* picten2.gif */,
+				2B3625E31A4A46B200BCD590 /* picten.gif */,
+				2B3625DC1A4A44D300BCD590 /* 名称未設定-1.gif */,
 				2B0817961A492FCD009CDEE6 /* AppDelegate.h */,
 				2B0817971A492FCD009CDEE6 /* AppDelegate.m */,
 				2B0817991A492FCD009CDEE6 /* ViewController.h */,
@@ -199,9 +214,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B3625DF1A4A44DE00BCD590 /* 名称未設定-x2.gif in Resources */,
+				2B3625E51A4A46B200BCD590 /* picten.gif in Resources */,
 				2B08179E1A492FCD009CDEE6 /* Main.storyboard in Resources */,
+				2B3625E41A4A46B200BCD590 /* picten2.gif in Resources */,
+				2B3625E11A4A46A900BCD590 /* leaf-6.jpg in Resources */,
 				2B0817A31A492FCD009CDEE6 /* LaunchScreen.xib in Resources */,
 				2B0817A01A492FCD009CDEE6 /* Images.xcassets in Resources */,
+				2B3625DD1A4A44D300BCD590 /* 名称未設定-1.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +434,7 @@
 				2B0817B41A492FCD009CDEE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B0817B51A492FCD009CDEE6 /* Build configuration list for PBXNativeTarget "pictenTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +443,7 @@
 				2B0817B71A492FCD009CDEE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
