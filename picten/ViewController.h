@@ -11,10 +11,15 @@
 @interface ViewController : UIViewController{
  
     IBOutlet UIButton *iti;
+    IBOutlet UIButton *goukei;
+
+    IBOutlet UIImageView *imgview;
     IBOutlet UIButton *ni;
     IBOutlet UIButton *san;
     IBOutlet UIButton *yon;
     IBOutlet UIButton *ue;
+        IBOutlet UILabel *label;
+    int count;//全部足した数値を一時的に入れる変数
     
 }
 
@@ -23,5 +28,6 @@
 -(IBAction)kotaesan;
 -(IBAction)kotaeyon;
 -(IBAction)kaisi;
+
 @end
 

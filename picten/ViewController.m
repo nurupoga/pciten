@@ -8,7 +8,9 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController (){
+    int total;
+}
 
 @end
 
@@ -25,6 +27,8 @@
     // Dispose of any resources that can be recreated.
 }
 -(IBAction)kaisi;{
+    
+    
     
     int i, n,a,e,m,s,sum;
     
@@ -66,31 +70,142 @@ next:;
     
     //その型へんかんした変数をsetTitleに入れる
     NSString *str = [NSString stringWithFormat:@"%d", n];
-
+    
     NSString *stra = [NSString stringWithFormat:@"%d", a];
-
+    
     NSString *stre = [NSString stringWithFormat:@"%d", e];
     NSString *strm = [NSString stringWithFormat:@"%d", m];
     NSString *strs = [NSString stringWithFormat:@"%d", s];
-
+    
     //    NSString *str = @"押してね";
     
     
-            [iti setTitle:strs forState:UIControlStateNormal];
+    [iti setTitle:strs forState:UIControlStateNormal];
     
-            
- 
-            [ni setTitle:stra forState:UIControlStateNormal];
-   
     
-            [san setTitle:strm forState:UIControlStateNormal];
     
-            [yon setTitle:stre forState:UIControlStateNormal];
+    [ni setTitle:stra forState:UIControlStateNormal];
     
-            [ue setTitle:str forState:UIControlStateNormal];
     
-    }
+    [san setTitle:strm forState:UIControlStateNormal];
+    
+    [yon setTitle:stre forState:UIControlStateNormal];
+    
+    [ue setTitle:str forState:UIControlStateNormal];
+    
+    //    goukei = iti
+    //    goukei= @"iti"+ @"5";
+    
+    
+    //
+    NSString *itiStr = iti.currentTitle;
+    NSString *niStr = ni.currentTitle;
+    NSString *sanStr = san.currentTitle;
+    NSString *yonStr = yon.currentTitle;
+    //TODO: NSString itiStr からint に変換して、同様に
+    
+    NSLog(@"成功:%d",itiStr.intValue);
+    NSLog(@"成功:%d",niStr.intValue);
+    NSLog(@"成功:%d",sanStr.intValue);
+    NSLog(@"成功:%d",yonStr.intValue);
+    
+    
+    //    NSString
+    
+}
 
+-(IBAction)kotaeiti{
+    count=count;
+    
+    NSString *itiStr = iti.currentTitle;
+    NSLog(@"成功:%d",itiStr.intValue);
+    int count = itiStr.intValue;
+    total=total+count;
+    label.text = [NSString stringWithFormat:@"%d",total];
+    
+    
+    if (total==10) {
+        imgview.image = [UIImage imageNamed:@"frame00033.png"];
+        [self.view addSubview:imgview];
+    }
+    else if(total > 10){
+        
+        imgview.image = [UIImage imageNamed:@"02FF0975293.png"];
+        [self.view addSubview:imgview];
+        
+    }
+    
+    
+    
+}
+
+
+-(IBAction)kotaeni{
+    count=count;
+    
+    NSString *niStr = ni.currentTitle;
+    NSLog(@"成功:%d",niStr.intValue);
+    int count = niStr.intValue;
+    total=total+count;
+    label.text = [NSString stringWithFormat:@"%d",total];
+    
+    
+    if (total==10) {
+        imgview.image = [UIImage imageNamed:@"frame00033.png"];
+        [self.view addSubview:imgview];
+    }
+    else if(total > 10){
+        
+        imgview.image = [UIImage imageNamed:@"02FF0975293.png"];
+        [self.view addSubview:imgview];
+        
+    }
+    
+}
+
+
+-(IBAction)kotaesan{
+    NSString *sanStr = san.currentTitle;
+    NSLog(@"成功:%d",sanStr.intValue);
+    count = sanStr.intValue;
+    total=total+count;
+    label.text = [NSString stringWithFormat:@"%d",total];
+    
+    if (total==10) {
+        imgview.image = [UIImage imageNamed:@"frame00033.png"];
+        [self.view addSubview:imgview];
+    }
+    else if(total > 10){
+        
+        imgview.image = [UIImage imageNamed:@"02FF0975293.png"];
+        [self.view addSubview:imgview];
+        
+    }
+    
+}
+
+
+-(IBAction)kotaeyon{
+    NSString *yonStr = yon.currentTitle;
+    NSLog(@"成功:%d",yonStr.intValue);
+    count = yonStr.intValue;
+    total=total+count;
+    label.text = [NSString stringWithFormat:@"%d",total];
+    
+    if (total==10) {
+        imgview.image = [UIImage imageNamed:@"frame00033.png"];
+        [self.view addSubview:imgview];
+    }
+    else if(total > 10){
+        
+        imgview.image = [UIImage imageNamed:@"02FF0975293.png"];
+        [self.view addSubview:imgview];
+
+    }
+    
+    
+    
+}
 
 
 @end

@@ -19,6 +19,8 @@
 		2B3625E11A4A46A900BCD590 /* leaf-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B3625E01A4A46A900BCD590 /* leaf-6.jpg */; };
 		2B3625E41A4A46B200BCD590 /* picten2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2B3625E21A4A46B200BCD590 /* picten2.gif */; };
 		2B3625E51A4A46B200BCD590 /* picten.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2B3625E31A4A46B200BCD590 /* picten.gif */; };
+		2BCB481B1A4BEAC1008373B3 /* frame00033.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BCB481A1A4BEAC1008373B3 /* frame00033.png */; };
+		2BCB481D1A4BEB61008373B3 /* 02FF0975293.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BCB481C1A4BEB61008373B3 /* 02FF0975293.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		2B3625E01A4A46A900BCD590 /* leaf-6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "leaf-6.jpg"; sourceTree = "<group>"; };
 		2B3625E21A4A46B200BCD590 /* picten2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = picten2.gif; sourceTree = "<group>"; };
 		2B3625E31A4A46B200BCD590 /* picten.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = picten.gif; sourceTree = "<group>"; };
+		2BCB481A1A4BEAC1008373B3 /* frame00033.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame00033.png; sourceTree = "<group>"; };
+		2BCB481C1A4BEB61008373B3 /* 02FF0975293.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02FF0975293.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 			children = (
 				2B3625DE1A4A44DE00BCD590 /* 名称未設定-x2.gif */,
 				2B3625E01A4A46A900BCD590 /* leaf-6.jpg */,
+				2BCB481C1A4BEB61008373B3 /* 02FF0975293.png */,
+				2BCB481A1A4BEAC1008373B3 /* frame00033.png */,
 				2B3625E21A4A46B200BCD590 /* picten2.gif */,
 				2B3625E31A4A46B200BCD590 /* picten.gif */,
 				2B3625DC1A4A44D300BCD590 /* 名称未設定-1.gif */,
@@ -183,6 +189,7 @@
 				TargetAttributes = {
 					2B08178E1A492FCD009CDEE6 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = CRF5Z6NHJU;
 					};
 					2B0817A71A492FCD009CDEE6 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -216,8 +223,10 @@
 			files = (
 				2B3625DF1A4A44DE00BCD590 /* 名称未設定-x2.gif in Resources */,
 				2B3625E51A4A46B200BCD590 /* picten.gif in Resources */,
+				2BCB481B1A4BEAC1008373B3 /* frame00033.png in Resources */,
 				2B08179E1A492FCD009CDEE6 /* Main.storyboard in Resources */,
 				2B3625E41A4A46B200BCD590 /* picten2.gif in Resources */,
+				2BCB481D1A4BEB61008373B3 /* 02FF0975293.png in Resources */,
 				2B3625E11A4A46A900BCD590 /* leaf-6.jpg in Resources */,
 				2B0817A31A492FCD009CDEE6 /* LaunchScreen.xib in Resources */,
 				2B0817A01A492FCD009CDEE6 /* Images.xcassets in Resources */,
@@ -368,6 +377,7 @@
 				INFOPLIST_FILE = picten/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -378,6 +388,7 @@
 				INFOPLIST_FILE = picten/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
