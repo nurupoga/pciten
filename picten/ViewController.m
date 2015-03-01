@@ -10,6 +10,7 @@
 
 @interface ViewController (){
     int total;
+    int ternNumber;
 }
 
 @end
@@ -24,22 +25,7 @@
     home.hidden = YES;
     kaisi.hidden = YES;
     menulabel.hidden = YES;
-    
-    if (count > 1) {
-        [wankaisi setTitle:@"一人目" forState:UIControlStateNormal];
-    }
-    if (count > 2) {
-        [wankaisi setTitle:@"二人目" forState:UIControlStateNormal];
-    }
-    
-   
-    if(count > 1){
-        [wankaisi setTitle:@"一人目" forState:UIControlStateNormal];
-}else if(count > 2){
-        [wankaisi setTitle:@"二人目" forState:UIControlStateNormal];
-    }else{
-        // 条件１、条件２いずれもNOの場合の処理
-    }
+    ternNumber = 0;
 
 
 }
@@ -66,10 +52,32 @@
     stop.hidden = YES;
     home.hidden = YES;
     menulabel.hidden = YES;
+    ternNumber++;
+
     //白い背景をいれている
-    haikei.alpha=0.7;
+    if (ternNumber == 1) {
+        [wankaisi setTitle:@"二人目" forState:UIControlStateNormal];
+    }
+    if (ternNumber == 2) {
+        [wankaisi setTitle:@"一人目" forState:UIControlStateNormal];
+        ternNumber = 0;
+    }
+        haikei.alpha=0.7;
     //〜人目を表示する
     wankaisi.hidden = NO;
+    
+    if (ternNumber>=10) {
+        NSLog(@"call kakutoku");
+
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:@"獲得"
+                              message:@"一点獲得"
+                              delegate:self
+                              cancelButtonTitle:nil
+                              otherButtonTitles:@"OK", nil];
+        [alert show];
+    }
+
     
     
     /* int hensin = arc4random() % 7 + 1;
@@ -95,6 +103,24 @@
     [ni setTitle:[NSString stringWithFormat:@"%d",newni] forState:UIControlStateHighlighted];
     
     
+    kaisi.hidden = YES;
+    stop.hidden = YES;
+    home.hidden = YES;
+    menulabel.hidden = YES;
+    ternNumber++;
+    
+    //白い背景をいれている
+    if (ternNumber == 1) {
+        [wankaisi setTitle:@"二人目" forState:UIControlStateNormal];
+    }
+    if (ternNumber == 2) {
+        [wankaisi setTitle:@"一人目" forState:UIControlStateNormal];
+        ternNumber = 0;
+    }
+    haikei.alpha=0.7;
+    //〜人目を表示する
+    wankaisi.hidden = NO;
+    
     
     /* int hensin = arc4random() % 7 + 1;
      NSLog(@"敵:%d",hensin);
@@ -114,7 +140,25 @@
     int newsan = arc4random() % 10 + 1;
     [san setTitle:[NSString stringWithFormat:@"%d",newsan] forState:UIControlStateNormal];
     [san setTitle:[NSString stringWithFormat:@"%d",newsan] forState:UIControlStateHighlighted];
+    kaisi.hidden = YES;
+    stop.hidden = YES;
+    home.hidden = YES;
+    menulabel.hidden = YES;
+    ternNumber++;
     
+    //白い背景をいれている
+    if (ternNumber == 1) {
+        [wankaisi setTitle:@"二人目" forState:UIControlStateNormal];
+    }
+    if (ternNumber == 2) {
+        [wankaisi setTitle:@"一人目" forState:UIControlStateNormal];
+        ternNumber = 0;
+    }
+    haikei.alpha=0.7;
+    //〜人目を表示する
+    wankaisi.hidden = NO;
+    
+
     
     /*int hensin = arc4random() % 7 + 1;
      NSLog(@"敵:%d",hensin);
@@ -137,7 +181,25 @@
     int newyon = arc4random() % 10 + 1;
     [yon setTitle:[NSString stringWithFormat:@"%d",newyon] forState:UIControlStateNormal];
     [yon setTitle:[NSString stringWithFormat:@"%d",newyon] forState:UIControlStateHighlighted];
+    kaisi.hidden = YES;
+    stop.hidden = YES;
+    home.hidden = YES;
+    menulabel.hidden = YES;
+    ternNumber++;
     
+    //白い背景をいれている
+    if (ternNumber == 1) {
+        [wankaisi setTitle:@"二人目" forState:UIControlStateNormal];
+    }
+    if (ternNumber == 2) {
+        [wankaisi setTitle:@"一人目" forState:UIControlStateNormal];
+        ternNumber = 0;
+    }
+    haikei.alpha=0.7;
+    //〜人目を表示する
+    wankaisi.hidden = NO;
+    
+
     
     /*int hensin = arc4random() % 7 + 1;
      NSLog(@"敵:%d",hensin);
@@ -299,6 +361,12 @@ next:;
     }
     
     else if(total > 10){
+        aite.text = [NSString stringWithFormat:@"%d",aitePoint];
+        aitePoint = aitePoint +1;
+        aite.text = [NSString stringWithFormat:@"%d",aitePoint];
+
+        
+        
         
         // anata.text = [NSString stringWithFormat:@"%d",anataPoint];
         

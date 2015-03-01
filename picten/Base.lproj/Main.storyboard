@@ -465,7 +465,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIU-Vz-fDE">
                                 <rect key="frame" x="172" y="118" width="191" height="84"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <state key="normal" title="~人目">
+                                <state key="normal" title="一人目">
                                     <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -479,6 +479,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="aite" destination="6Il-xt-ujr" id="mZ3-xd-kqN"/>
                         <outlet property="anata" destination="b4F-Jg-3yx" id="hxJ-WB-8PC"/>
                         <outlet property="haikei" destination="bLY-ZI-kmA" id="ZFY-57-qwA"/>
                         <outlet property="home" destination="XeN-YW-UIR" id="MgS-KN-mZR"/>
@@ -487,7 +488,6 @@
                         <outlet property="label" destination="F2t-ub-KhR" id="IYt-um-VgJ"/>
                         <outlet property="menulabel" destination="w2b-IY-mYX" id="PvC-5D-hnZ"/>
                         <outlet property="ni" destination="tEn-K1-zgb" id="25l-Oh-FW2"/>
-                        <outlet property="pc" destination="6Il-xt-ujr" id="hh6-cA-5bp"/>
                         <outlet property="san" destination="vqr-PQ-LnB" id="rXO-Ht-Gfi"/>
                         <outlet property="stop" destination="t2F-SV-hpf" id="sNb-fv-aKj"/>
                         <outlet property="wankaisi" destination="AIU-Vz-fDE" id="F0j-XV-LDB"/>

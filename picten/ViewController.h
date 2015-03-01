@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController{
  
     int anataPoint;
+     int aitePoint;
     int pcPoint;
     
     IBOutlet UIButton *goukei;
@@ -19,6 +20,7 @@
     IBOutlet UILabel *pc;
     
     IBOutlet UILabel *anata;
+     IBOutlet UILabel *aite;
     
 
     IBOutlet UIButton *wankaisi;
