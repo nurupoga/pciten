@@ -23,17 +23,129 @@
     stop.hidden = YES;
     home.hidden = YES;
     kaisi.hidden = YES;
-
     menulabel.hidden = YES;
+    
+    if (count > 1) {
+        [wankaisi setTitle:@"一人目" forState:UIControlStateNormal];
+    }
+    if (count > 2) {
+        [wankaisi setTitle:@"二人目" forState:UIControlStateNormal];
+    }
+    
+   
+    if(count > 1){
+        [wankaisi setTitle:@"一人目" forState:UIControlStateNormal];
+}else if(count > 2){
+        [wankaisi setTitle:@"二人目" forState:UIControlStateNormal];
+    }else{
+        // 条件１、条件２いずれもNOの場合の処理
+    }
 
-    
-    
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark 数字が表示されるボタン↓
+
+-(IBAction)kotaeiti{
+    NSLog(@"call 1Button");
+    NSString *itiStr = iti.currentTitle;
+    NSLog(@"成功:%d",itiStr.intValue);
+    int count = itiStr.intValue;
+    total=total+count;
+    label.text = [NSString stringWithFormat:@"%d",total];
+    [self anatahantei];
+    int newiti = arc4random() % 10 + 1;
+    [iti setTitle:[NSString stringWithFormat:@"%d",newiti] forState:UIControlStateNormal];
+    [iti setTitle:[NSString stringWithFormat:@"%d",newiti] forState:UIControlStateHighlighted];
+    
+    kaisi.hidden = YES;
+    stop.hidden = YES;
+    home.hidden = YES;
+    menulabel.hidden = YES;
+    //白い背景をいれている
+    haikei.alpha=0.7;
+    //〜人目を表示する
+    wankaisi.hidden = NO;
+    
+    
+    /* int hensin = arc4random() % 7 + 1;
+     NSLog(@"敵:%d",hensin);
+     label.text = [NSString stringWithFormat:@"%d", hensin + [label.text intValue]];*/
+    
+    [self pchantei];
+}
+
+-(IBAction)kotaeni{
+    count=count;
+    
+    NSString *niStr = ni.currentTitle;
+    NSLog(@"成功:%d",niStr.intValue);
+    int count = niStr.intValue;
+    total=total+count;
+    label.text = [NSString stringWithFormat:@"%d",total];
+    
+    [self anatahantei];
+    
+    int newni = arc4random() % 10 + 1;
+    [ni setTitle:[NSString stringWithFormat:@"%d",newni] forState:UIControlStateNormal];
+    [ni setTitle:[NSString stringWithFormat:@"%d",newni] forState:UIControlStateHighlighted];
+    
+    
+    
+    /* int hensin = arc4random() % 7 + 1;
+     NSLog(@"敵:%d",hensin);
+     label.text = [NSString stringWithFormat:@"%d", hensin + [label.text intValue]];*/
+    
+    [self pchantei];
+}
+
+-(IBAction)kotaesan{
+    NSString *sanStr = san.currentTitle;
+    NSLog(@"成功:%d",sanStr.intValue);
+    count = sanStr.intValue;
+    total=total+count;
+    label.text = [NSString stringWithFormat:@"%d",total];
+    
+    [self anatahantei];
+    int newsan = arc4random() % 10 + 1;
+    [san setTitle:[NSString stringWithFormat:@"%d",newsan] forState:UIControlStateNormal];
+    [san setTitle:[NSString stringWithFormat:@"%d",newsan] forState:UIControlStateHighlighted];
+    
+    
+    /*int hensin = arc4random() % 7 + 1;
+     NSLog(@"敵:%d",hensin);
+     label.text = [NSString stringWithFormat:@"%d", hensin + [label.text intValue]];*/
+    
+    [self pchantei];
+}
+
+
+-(IBAction)kotaeyon{
+    NSString *yonStr = yon.currentTitle;
+    NSLog(@"成功:%d",yonStr.intValue);
+    count = yonStr.intValue;
+    total=total+count;
+    label.text = [NSString stringWithFormat:@"%d",total];
+    [self anatahantei];
+    
+    //新しい数字を入れてあげる
+    
+    int newyon = arc4random() % 10 + 1;
+    [yon setTitle:[NSString stringWithFormat:@"%d",newyon] forState:UIControlStateNormal];
+    [yon setTitle:[NSString stringWithFormat:@"%d",newyon] forState:UIControlStateHighlighted];
+    
+    
+    /*int hensin = arc4random() % 7 + 1;
+     NSLog(@"敵:%d",hensin);
+     label.text = [NSString stringWithFormat:@"%d", hensin + [label.text intValue]];*/
+    
+    [self pchantei];
+}
+#pragma mark　開始　メニュー
 -(IBAction)kaisi;{
     
     
@@ -122,9 +234,9 @@ next:;
     stop.hidden = YES;
     home.hidden = YES;
     menulabel.hidden = YES;
-
+    
     wankaisi.hidden = YES;
-
+    
     haikei.alpha=0.7;
     [UIView beginAnimations:@"FadeOut" context:nil];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
@@ -132,154 +244,34 @@ next:;
     haikei.alpha=0;
     [UIView commitAnimations];
     
-
+    
     //    NSString
     
 }
 
--(IBAction)kotaeiti{
-    count=count;
-    
-    NSString *itiStr = iti.currentTitle;
-    NSLog(@"成功:%d",itiStr.intValue);
-    int count = itiStr.intValue;
-    total=total+count;
-    label.text = [NSString stringWithFormat:@"%d",total];
-    
 
-    [self anatahantei];
-    
-    
-    int newiti = arc4random() % 10 + 1;
-    [iti setTitle:[NSString stringWithFormat:@"%d",newiti] forState:UIControlStateNormal];
-    [iti setTitle:[NSString stringWithFormat:@"%d",newiti] forState:UIControlStateHighlighted];
-
-    
-   /* int hensin = arc4random() % 7 + 1;
-    NSLog(@"敵:%d",hensin);
-    label.text = [NSString stringWithFormat:@"%d", hensin + [label.text intValue]];*/
-    
-   [self pchantei];}
-
-
--(IBAction)kotaeni{
-    count=count;
-    
-    NSString *niStr = ni.currentTitle;
-    NSLog(@"成功:%d",niStr.intValue);
-    int count = niStr.intValue;
-    total=total+count;
-    label.text = [NSString stringWithFormat:@"%d",total];
-    
-    [self anatahantei];
-
-    int newni = arc4random() % 10 + 1;
-    [ni setTitle:[NSString stringWithFormat:@"%d",newni] forState:UIControlStateNormal];
-    [ni setTitle:[NSString stringWithFormat:@"%d",newni] forState:UIControlStateHighlighted];
-
-    
-    
-    /* int hensin = arc4random() % 7 + 1;
-    NSLog(@"敵:%d",hensin);
-    label.text = [NSString stringWithFormat:@"%d", hensin + [label.text intValue]];*/
-    
-    [self pchantei];}
-
-
--(IBAction)kotaesan{
-    NSString *sanStr = san.currentTitle;
-    NSLog(@"成功:%d",sanStr.intValue);
-    count = sanStr.intValue;
-    total=total+count;
-    label.text = [NSString stringWithFormat:@"%d",total];
-    
-    [self anatahantei];
-    int newsan = arc4random() % 10 + 1;
-    [san setTitle:[NSString stringWithFormat:@"%d",newsan] forState:UIControlStateNormal];
-    [san setTitle:[NSString stringWithFormat:@"%d",newsan] forState:UIControlStateHighlighted];
-
-    
-    /*int hensin = arc4random() % 7 + 1;
-    NSLog(@"敵:%d",hensin);
-    label.text = [NSString stringWithFormat:@"%d", hensin + [label.text intValue]];*/
-    
-   [self pchantei];
-}
-
-
--(IBAction)kotaeyon{
-    NSString *yonStr = yon.currentTitle;
-    NSLog(@"成功:%d",yonStr.intValue);
-    count = yonStr.intValue;
-    total=total+count;
-    label.text = [NSString stringWithFormat:@"%d",total];
-    [self anatahantei];
-    
-    //新しい数字を入れてあげる
-    
-    int newyon = arc4random() % 10 + 1;
-    [yon setTitle:[NSString stringWithFormat:@"%d",newyon] forState:UIControlStateNormal];
-    [yon setTitle:[NSString stringWithFormat:@"%d",newyon] forState:UIControlStateHighlighted];
-
-    
-    /*int hensin = arc4random() % 7 + 1;
-    NSLog(@"敵:%d",hensin);
-    label.text = [NSString stringWithFormat:@"%d", hensin + [label.text intValue]];*/
-    
-    [self pchantei];
-}
 
 
 -(IBAction)menu{
     
     stop.hidden = NO;
-
+    
     kaisi.hidden = NO;
-
+    
     
     home.hidden = NO;
     menulabel.hidden = NO;
-
-   
+    
+    
     haikei.alpha=0;
     [UIView beginAnimations:@"FadeOut" context:nil];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     [UIView setAnimationDuration:0.3];
     haikei.alpha=0.7;
     [UIView commitAnimations];
-
-}
-
-
--(void)anatahantei{
-    if (total==10) {
-        anata.text = [NSString stringWithFormat:@"%d",anataPoint];
-    anataPoint = anataPoint +1;
-    anata.text = [NSString stringWithFormat:@"%d",anataPoint];
-    }
     
-    else if(total > 10){
-        
-       // anata.text = [NSString stringWithFormat:@"%d",anataPoint];
-        
-        
 }
-}
-    
--(void)pchantei{
-            if (total==10) {
-                pc.text = [NSString stringWithFormat:@"%d",pcPoint];
-}
-            else if(total > 10){
-               // pc.text = [NSString stringWithFormat:@"%d",pcPoint];
 
-                
-              
-
-            }
-
-
-}
 
 
 
@@ -294,8 +286,40 @@ next:;
     
     
     [self.presentingViewController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-   }
+}
 
+
+#pragma mark 判定
+
+-(void)anatahantei{
+    if (total==10) {
+        anata.text = [NSString stringWithFormat:@"%d",anataPoint];
+        anataPoint = anataPoint +1;
+        anata.text = [NSString stringWithFormat:@"%d",anataPoint];
+    }
+    
+    else if(total > 10){
+        
+        // anata.text = [NSString stringWithFormat:@"%d",anataPoint];
+        
+        
+    }
+}
+
+-(void)pchantei{
+    if (total==10) {
+        pc.text = [NSString stringWithFormat:@"%d",pcPoint];
+    }
+    else if(total > 10){
+        // pc.text = [NSString stringWithFormat:@"%d",pcPoint];
+        
+        
+        
+        
+    }
+    
+    
+}
 
 
 
