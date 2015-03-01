@@ -20,6 +20,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     srand((unsigned)time(NULL));
+    stop.hidden = YES;
+    home.hidden = YES;
+    kaisi.hidden = YES;
+
+    menulabel.hidden = YES;
+
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,6 +77,7 @@ next:;
     
     
     //その型へんかんした変数をsetTitleに入れる
+    //
     NSString *str = [NSString stringWithFormat:@"%d", n];
     
     NSString *stra = [NSString stringWithFormat:@"%d", a];
@@ -109,7 +118,21 @@ next:;
     NSLog(@"成功:%d",sanStr.intValue);
     NSLog(@"成功:%d",yonStr.intValue);
     
+    kaisi.hidden = YES;
+    stop.hidden = YES;
+    home.hidden = YES;
+    menulabel.hidden = YES;
+
+    wankaisi.hidden = YES;
+
+    haikei.alpha=0.7;
+    [UIView beginAnimations:@"FadeOut" context:nil];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationDuration:0.3];
+    haikei.alpha=0;
+    [UIView commitAnimations];
     
+
     //    NSString
     
 }
@@ -123,21 +146,20 @@ next:;
     total=total+count;
     label.text = [NSString stringWithFormat:@"%d",total];
     
-    
-    if (total==10) {
-        imgview.image = [UIImage imageNamed:@"frame00033.png"];
-        [self.view addSubview:imgview];
-    }
-    else if(total > 10){
-        
-        imgview.image = [UIImage imageNamed:@"02FF0975293.png"];
-        [self.view addSubview:imgview];
-        
-    }
+
+    [self anatahantei];
     
     
+    int newiti = arc4random() % 10 + 1;
+    [iti setTitle:[NSString stringWithFormat:@"%d",newiti] forState:UIControlStateNormal];
+    [iti setTitle:[NSString stringWithFormat:@"%d",newiti] forState:UIControlStateHighlighted];
+
     
-}
+   /* int hensin = arc4random() % 7 + 1;
+    NSLog(@"敵:%d",hensin);
+    label.text = [NSString stringWithFormat:@"%d", hensin + [label.text intValue]];*/
+    
+   [self pchantei];}
 
 
 -(IBAction)kotaeni{
@@ -149,19 +171,19 @@ next:;
     total=total+count;
     label.text = [NSString stringWithFormat:@"%d",total];
     
+    [self anatahantei];
+
+    int newni = arc4random() % 10 + 1;
+    [ni setTitle:[NSString stringWithFormat:@"%d",newni] forState:UIControlStateNormal];
+    [ni setTitle:[NSString stringWithFormat:@"%d",newni] forState:UIControlStateHighlighted];
+
     
-    if (total==10) {
-        imgview.image = [UIImage imageNamed:@"frame00033.png"];
-        [self.view addSubview:imgview];
-    }
-    else if(total > 10){
-        
-        imgview.image = [UIImage imageNamed:@"02FF0975293.png"];
-        [self.view addSubview:imgview];
-        
-    }
     
-}
+    /* int hensin = arc4random() % 7 + 1;
+    NSLog(@"敵:%d",hensin);
+    label.text = [NSString stringWithFormat:@"%d", hensin + [label.text intValue]];*/
+    
+    [self pchantei];}
 
 
 -(IBAction)kotaesan{
@@ -171,17 +193,17 @@ next:;
     total=total+count;
     label.text = [NSString stringWithFormat:@"%d",total];
     
-    if (total==10) {
-        imgview.image = [UIImage imageNamed:@"frame00033.png"];
-        [self.view addSubview:imgview];
-    }
-    else if(total > 10){
-        
-        imgview.image = [UIImage imageNamed:@"02FF0975293.png"];
-        [self.view addSubview:imgview];
-        
-    }
+    [self anatahantei];
+    int newsan = arc4random() % 10 + 1;
+    [san setTitle:[NSString stringWithFormat:@"%d",newsan] forState:UIControlStateNormal];
+    [san setTitle:[NSString stringWithFormat:@"%d",newsan] forState:UIControlStateHighlighted];
+
     
+    /*int hensin = arc4random() % 7 + 1;
+    NSLog(@"敵:%d",hensin);
+    label.text = [NSString stringWithFormat:@"%d", hensin + [label.text intValue]];*/
+    
+   [self pchantei];
 }
 
 
@@ -191,21 +213,91 @@ next:;
     count = yonStr.intValue;
     total=total+count;
     label.text = [NSString stringWithFormat:@"%d",total];
+    [self anatahantei];
     
+    //新しい数字を入れてあげる
+    
+    int newyon = arc4random() % 10 + 1;
+    [yon setTitle:[NSString stringWithFormat:@"%d",newyon] forState:UIControlStateNormal];
+    [yon setTitle:[NSString stringWithFormat:@"%d",newyon] forState:UIControlStateHighlighted];
+
+    
+    /*int hensin = arc4random() % 7 + 1;
+    NSLog(@"敵:%d",hensin);
+    label.text = [NSString stringWithFormat:@"%d", hensin + [label.text intValue]];*/
+    
+    [self pchantei];
+}
+
+
+-(IBAction)menu{
+    
+    stop.hidden = NO;
+
+    kaisi.hidden = NO;
+
+    
+    home.hidden = NO;
+    menulabel.hidden = NO;
+
+   
+    haikei.alpha=0;
+    [UIView beginAnimations:@"FadeOut" context:nil];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationDuration:0.3];
+    haikei.alpha=0.7;
+    [UIView commitAnimations];
+
+}
+
+
+-(void)anatahantei{
     if (total==10) {
-        imgview.image = [UIImage imageNamed:@"frame00033.png"];
-        [self.view addSubview:imgview];
+        anata.text = [NSString stringWithFormat:@"%d",anataPoint];
+    anataPoint = anataPoint +1;
+    anata.text = [NSString stringWithFormat:@"%d",anataPoint];
     }
+    
     else if(total > 10){
         
-        imgview.image = [UIImage imageNamed:@"02FF0975293.png"];
-        [self.view addSubview:imgview];
+       // anata.text = [NSString stringWithFormat:@"%d",anataPoint];
+        
+        
+}
+}
+    
+-(void)pchantei{
+            if (total==10) {
+                pc.text = [NSString stringWithFormat:@"%d",pcPoint];
+}
+            else if(total > 10){
+               // pc.text = [NSString stringWithFormat:@"%d",pcPoint];
 
-    }
+                
+              
+
+            }
+
+
+}
+
+
+
+-(IBAction)back{
     
     
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
+
+-(IBAction)exit{
+    
+    
+    [self.presentingViewController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+   }
+
+
+
 
 
 @end
