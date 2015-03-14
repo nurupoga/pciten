@@ -11,7 +11,6 @@
 		2B0817981A492FCD009CDEE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0817971A492FCD009CDEE6 /* AppDelegate.m */; };
 		2B08179B1A492FCD009CDEE6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B08179A1A492FCD009CDEE6 /* ViewController.m */; };
 		2B08179E1A492FCD009CDEE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B08179C1A492FCD009CDEE6 /* Main.storyboard */; };
-		2B0817A01A492FCD009CDEE6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B08179F1A492FCD009CDEE6 /* Images.xcassets */; };
 		2B0817A31A492FCD009CDEE6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B0817A11A492FCD009CDEE6 /* LaunchScreen.xib */; };
 		2B0817AF1A492FCD009CDEE6 /* pictenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0817AE1A492FCD009CDEE6 /* pictenTests.m */; };
 		2BA2CD7F1A7387D600CC4EF6 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2CD7E1A7387D600CC4EF6 /* white.png */; };
@@ -25,7 +24,6 @@
 		2BB13F961A73ED0100D58B6A /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BB13F951A73ED0100D58B6A /* menu.png */; };
 		2BCB481B1A4BEAC1008373B3 /* frame00033.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BCB481A1A4BEAC1008373B3 /* frame00033.png */; };
 		2BCB481D1A4BEB61008373B3 /* 02FF0975293.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BCB481C1A4BEB61008373B3 /* 02FF0975293.png */; };
-		2BE983691A86322D0087EDDA /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BE983681A86322D0087EDDA /* Images-2.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +45,6 @@
 		2B0817991A492FCD009CDEE6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2B08179A1A492FCD009CDEE6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2B08179D1A492FCD009CDEE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2B08179F1A492FCD009CDEE6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2B0817A21A492FCD009CDEE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2B0817A81A492FCD009CDEE6 /* pictenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pictenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B0817AD1A492FCD009CDEE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,7 +60,6 @@
 		2BB13F951A73ED0100D58B6A /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		2BCB481A1A4BEAC1008373B3 /* frame00033.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame00033.png; sourceTree = "<group>"; };
 		2BCB481C1A4BEB61008373B3 /* 02FF0975293.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02FF0975293.png; sourceTree = "<group>"; };
-		2BE983681A86322D0087EDDA /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,9 +113,7 @@
 				2B0817991A492FCD009CDEE6 /* ViewController.h */,
 				2B08179A1A492FCD009CDEE6 /* ViewController.m */,
 				2B08179C1A492FCD009CDEE6 /* Main.storyboard */,
-				2B08179F1A492FCD009CDEE6 /* Images.xcassets */,
 				2B0817A11A492FCD009CDEE6 /* LaunchScreen.xib */,
-				2BE983681A86322D0087EDDA /* Images-2.xcassets */,
 				2B0817921A492FCD009CDEE6 /* Supporting Files */,
 			);
 			path = picten;
@@ -279,7 +273,6 @@
 				2BB13F911A73EB5D00D58B6A /* 1.png in Resources */,
 				2BB13F8E1A73EAEC00D58B6A /* ninzuu.png in Resources */,
 				2BB13F811A73E15100D58B6A /* tumblr_mx5uzcR7Ba1rinthwo1_500.jpg in Resources */,
-				2BE983691A86322D0087EDDA /* Images-2.xcassets in Resources */,
 				2BB13F8C1A73EA5D00D58B6A /* start.png in Resources */,
 				2BB13F961A73ED0100D58B6A /* menu.png in Resources */,
 				2BCB481B1A4BEAC1008373B3 /* frame00033.png in Resources */,
@@ -288,7 +281,6 @@
 				2BA2CD7F1A7387D600CC4EF6 /* white.png in Resources */,
 				2BCB481D1A4BEB61008373B3 /* 02FF0975293.png in Resources */,
 				2B0817A31A492FCD009CDEE6 /* LaunchScreen.xib in Resources */,
-				2B0817A01A492FCD009CDEE6 /* Images.xcassets in Resources */,
 				2BB13F941A73EC9B00D58B6A /* circular-little-menu-button_318-25364.png in Resources */,
 				2BB13F851A73E3B200D58B6A /* rogonew.png in Resources */,
 			);
@@ -433,7 +425,6 @@
 		2B0817B31A492FCD009CDEE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -449,7 +440,6 @@
 		2B0817B41A492FCD009CDEE6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

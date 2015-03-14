@@ -66,29 +66,14 @@
     //〜人目を表示する
     wankaisi.hidden = NO;
     
-    if (ternNumber>=10) {
-        NSLog(@"call kakutoku");
-
-        UIAlertView *alert = [[UIAlertView alloc]
-                              initWithTitle:@"獲得"
-                              message:@"一点獲得"
-                              delegate:self
-                              cancelButtonTitle:nil
-                              otherButtonTitles:@"OK", nil];
-        [alert show];
-    }
-
-    
     
     /* int hensin = arc4random() % 7 + 1;
      NSLog(@"敵:%d",hensin);
      label.text = [NSString stringWithFormat:@"%d", hensin + [label.text intValue]];*/
-    
-    [self pchantei];
+
 }
 
 -(IBAction)kotaeni{
-    count=count;
     
     NSString *niStr = ni.currentTitle;
     NSLog(@"成功:%d",niStr.intValue);
@@ -125,8 +110,7 @@
     /* int hensin = arc4random() % 7 + 1;
      NSLog(@"敵:%d",hensin);
      label.text = [NSString stringWithFormat:@"%d", hensin + [label.text intValue]];*/
-    
-    [self pchantei];
+
 }
 
 -(IBAction)kotaesan{
@@ -163,8 +147,7 @@
     /*int hensin = arc4random() % 7 + 1;
      NSLog(@"敵:%d",hensin);
      label.text = [NSString stringWithFormat:@"%d", hensin + [label.text intValue]];*/
-    
-    [self pchantei];
+
 }
 
 
@@ -204,8 +187,6 @@
     /*int hensin = arc4random() % 7 + 1;
      NSLog(@"敵:%d",hensin);
      label.text = [NSString stringWithFormat:@"%d", hensin + [label.text intValue]];*/
-    
-    [self pchantei];
 }
 #pragma mark　開始　メニュー
 -(IBAction)kaisi;{
@@ -355,38 +336,39 @@ next:;
 
 -(void)anatahantei{
     if (total==10) {
+        NSLog(@"10!!!!!!");
         anata.text = [NSString stringWithFormat:@"%d",anataPoint];
         anataPoint = anataPoint +1;
         anata.text = [NSString stringWithFormat:@"%d",anataPoint];
+        
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:@"メッセージ"
+                              message:@"一点獲得"
+                              delegate:self
+                              cancelButtonTitle:nil
+                              otherButtonTitles:@"OK", nil];
+        [alert show];
+
     }
     
     else if(total > 10){
         aite.text = [NSString stringWithFormat:@"%d",aitePoint];
         aitePoint = aitePoint +1;
         aite.text = [NSString stringWithFormat:@"%d",aitePoint];
-
+        total = 0;
+        label.text = @"0";
         
-        
-        
-        // anata.text = [NSString stringWithFormat:@"%d",anataPoint];
-        
-        
-    }
-}
-
--(void)pchantei{
-    if (total==10) {
-        pc.text = [NSString stringWithFormat:@"%d",pcPoint];
-    }
-    else if(total > 10){
-        // pc.text = [NSString stringWithFormat:@"%d",pcPoint];
-        
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:@"メッセージ"
+                              message:@"10を超えました"
+                              delegate:self
+                              cancelButtonTitle:nil
+                              otherButtonTitles:@"OK", nil];
+        [alert show];
         
         
         
     }
-    
-    
 }
 
 
